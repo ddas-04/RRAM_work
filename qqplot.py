@@ -21,15 +21,16 @@ plt.rcParams.update({'font.size':20})
 # In[62]:
 
 
-n=10000
+n=input('Enter number of random data points = ')
 data_points = np.random.normal(0, 1, n)     
 normal_data=sorted(data_points)  
 
 
 # In[63]:
-
-
-a = 5. # shape
+print('**************************************************')
+print('Weibull distribution')
+a=input('Enter value of shape parameter =  ')
+#a = 2. # shape
 weibull_points = np.random.weibull(a, n)
 
 
@@ -52,10 +53,11 @@ plt.rc('font', family='serif')
 fig = plt.figure(figsize=(10,8))
 ax = fig.add_subplot(1, 1, 1)
 
-line, = ax.plot(sorted_weibull,normal_data)
+line, = ax.plot(sorted_weibull,normal_data,'*-')
 plt.grid()
 plt.xlabel('Weibull distribution data')
 plt.ylabel('Normal distribution data')
+plt.title('QQ plot')
 plt.show()
 
 
