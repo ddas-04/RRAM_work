@@ -57,7 +57,7 @@ line, = ax.plot(sorted_weibull,normal_data,'*-')
 plt.grid()
 plt.xlabel('Weibull distribution data')
 plt.ylabel('Normal distribution data')
-plt.title('QQ plot')
+plt.title('QQ plot, a='+str(a))
 plt.show()
 
 
